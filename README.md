@@ -1,5 +1,7 @@
 <h1 align="center">Hi there, I'm MaoDingA 👋</h1>
 
+<!-- Profile README - Last updated: 2026-04-27 -->
+
 <h3 align="center">A passionate developer from China 🇨🇳</h3>
 
 <p align="center">

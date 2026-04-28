@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 200" width="760" height="400">
+  <style>
+    * { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; }
+    .title { font-size: 18px; fill: #58A6FF; font-weight: 600; }
+    .lang-name { font-size: 13px; fill: #c9d1d9; }
+    .lang-pct { font-size: 13px; fill: #58A6FF; font-weight: 600; }
+  </style>
+
+  <!-- Card background -->
+  <rect x="1" y="1" rx="6" ry="6" height="198" width="378"
+        stroke="#30363d" stroke-width="1" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="28" y="32" class="title">Most Used Languages</text>
+  <line x1="28" y1="44" x2="352" y2="44" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ===== PIE CHART ===== -->
+  <!-- Center: 115, 118  Radius: 65 -->
+  <!-- Data: Python 35%, TypeScript 25%, JavaScript 15%, Rust 12%, Vue 8%, Other 5% -->
+  <g transform="translate(115, 118)">
+    <!-- Python: 35% = 126° (−90° to 36°) -->
+    <path d="M 0,-65 A 65,65 0 0,1 52.5,38.4 L 0,0 Z" fill="#3b82f6">
+      <title>Python 35%</title>
+    </path>
+
+    <!-- TypeScript: 25% = 90° (36° to 126°) -->
+    <path d="M 52.5,38.4 A 65,65 0 0,1 -38.4,52.5 L 0,0 Z" fill="#8b5cf6">
+      <title>TypeScript 25%</title>
+    </path>
+
+    <!-- JavaScript: 15% = 54° (126° to 180°) -->
+    <path d="M -38.4,52.5 A 65,65 0 0,1 -65,-0.01 L 0,0 Z" fill="#fbbf24">
+      <title>JavaScript 15%</title>
+    </path>
+
+    <!-- Rust: 12% = 43.2° (180° to 223.2°) -->
+    <path d="M -65,-0.01 A 65,65 0 0,1 -47.4,-44.7 L 0,0 Z" fill="#ff6600">
+      <title>Rust 12%</title>
+    </path>
+
+    <!-- Vue: 8% = 28.8° (223.2° to 252°) -->
+    <path d="M -47.4,-44.7 A 65,65 0 0,1 -20.0,-61.8 L 0,0 Z" fill="#34d399">
+      <title>Vue 8%</title>
+    </path>
+
+    <!-- Other: 5% = 18° (252° to 270°) -->
+    <path d="M -20.0,-61.8 A 65,65 0 0,1 0,-65 L 0,0 Z" fill="#64748b">
+      <title>Other 5%</title>
+    </path>
+
+    <!-- Center circle (donut hole) -->
+    <circle cx="0" cy="0" r="33" fill="#0d1117"/>
+  </g>
+
+  <!-- ===== LEGEND ===== -->
+  <g transform="translate(205, 58)">
+    <!-- Python -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#3b82f6"/>
+      <text x="20" y="11" class="lang-name">Python</text>
+      <text x="130" y="11" class="lang-pct">35%</text>
+    </g>
+
+    <!-- TypeScript -->
+    <g transform="translate(0, 24)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#8b5cf6"/>
+      <text x="20" y="11" class="lang-name">TypeScript</text>
+      <text x="130" y="11" class="lang-pct">25%</text>
+    </g>
+
+    <!-- JavaScript -->
+    <g transform="translate(0, 48)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#fbbf24"/>
+      <text x="20" y="11" class="lang-name">JavaScript</text>
+      <text x="130" y="11" class="lang-pct">15%</text>
+    </g>
+
+    <!-- Rust -->
+    <g transform="translate(0, 72)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#ff6600"/>
+      <text x="20" y="11" class="lang-name">Rust</text>
+      <text x="130" y="11" class="lang-pct">12%</text>
+    </g>
+
+    <!-- Vue -->
+    <g transform="translate(0, 96)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#34d399"/>
+      <text x="20" y="11" class="lang-name">Vue</text>
+      <text x="130" y="11" class="lang-pct">8%</text>
+    </g>
+
+    <!-- Other -->
+    <g transform="translate(0, 120)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#64748b"/>
+      <text x="20" y="11" class="lang-name">Other</text>
+      <text x="130" y="11" class="lang-pct">5%</text>
+    </g>
+  </g>
+</svg>

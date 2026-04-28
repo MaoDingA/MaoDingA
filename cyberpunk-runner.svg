@@ -88,8 +88,8 @@
 
       <!-- Neon signs -->
       <g filter="url(#glow)">
-        <text x="54" y="83" font-family="monospace" font-size="6" fill="#ff00ff" opacity="0.75">NEXUS</text>
-        <text x="360" y="80" font-family="monospace" font-size="6" fill="#00ffff" opacity="0.75">GRID</text>
+        <text x="48" y="83" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="6" fill="#ff00ff" opacity="0.75">大族广场</text>
+        <text x="352" y="80" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="6" fill="#00ffff" opacity="0.75">国锐金嵿</text>
       </g>
     </g>
 

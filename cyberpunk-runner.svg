@@ -379,6 +379,4 @@
     </rect>
   </g>
 
-  <!-- Vignette -->
-  <rect width="400" height="200" fill="none" stroke="#0c0614" stroke-width="24" opacity="0.35"/>
 </svg>

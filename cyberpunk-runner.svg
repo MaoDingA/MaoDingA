@@ -12,10 +12,10 @@
     </linearGradient>
 
     <!-- Sun glow -->
-    <radialGradient id="sunGlow" cx="80%" cy="70%" r="38%">
-      <stop offset="0%" stop-color="#ffaa44" stop-opacity="0.95"/>
-      <stop offset="22%" stop-color="#ff7722" stop-opacity="0.65"/>
-      <stop offset="50%" stop-color="#c44030" stop-opacity="0.3"/>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffaa44" stop-opacity="0.55"/>
+      <stop offset="25%" stop-color="#ff7722" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#c44030" stop-opacity="0.15"/>
       <stop offset="100%" stop-color="#3d1845" stop-opacity="0"/>
     </radialGradient>
 
@@ -42,7 +42,7 @@
 
     <!-- ===== PARALLAX LAYER: Distant mountains ===== -->
     <g id="farBg">
-      <path d="M0,118 L18,102 L35,112 L58,94 L82,108 L105,88 L130,104 L158,86 L185,102 L210,90 L238,106 L265,92 L290,108 L315,96 L342,110 L368,95 L388,108 L400,100 L400,138 L0,138Z" fill="#1a0d2a" opacity="0.7"/>
+      <path d="M0,118 L18,102 L35,112 L58,94 L82,108 L105,88 L130,104 L158,86 L185,102 L210,90 L238,106 L265,92 L290,108 L315,96 L342,110 L368,95 L388,108 L400,100 L400,138 L0,138Z" fill="#1a0d2a"/>
       <g fill="#58A6FF" opacity="0.3">
         <rect x="62" y="98" width="2" height="2"><animate attributeName="opacity" values="0.3;0.08;0.35;0.12;0.3" dur="4s" repeatCount="indefinite"/></rect>
         <rect x="108" y="92" width="2" height="2"><animate attributeName="opacity" values="0.15;0.4;0.1;0.38;0.15" dur="3s" repeatCount="indefinite"/></rect>
@@ -174,14 +174,61 @@
       <rect x="3" y="19" width="7" height="2" rx="1" fill="#ff6600" opacity="0.55"/>
       <rect x="28" y="19" width="7" height="2" rx="1" fill="#ff6600" opacity="0.55"/>
 
-      <!-- === SCARF (behind arms & legs) === -->
-      <g opacity="0.65">
-        <animateTransform attributeName="transform" type="skewX"
-          values="0; -15; 8; -12; 0"
-          keyTimes="0; 0.25; 0.5; 0.75; 1"
-          dur="0.45s" repeatCount="indefinite"/>
-        <path d="M9 20 L-2 32 L1 42 L-3 52 L2 62 L0 70 L7 72 L9 60Z" fill="#8b5cf6" opacity="0.35"/>
-        <path d="M9 22 L0 32 L2 40 L-1 50 L3 58 L1 66 L7 68 L9 56Z" fill="#ff6600" opacity="0.2"/>
+      <!-- === SCARF (flowing ribbons behind runner) === -->
+      <g opacity="0.6">
+        <!-- Ribbon 1: outer purple edge -->
+        <g>
+          <animateTransform attributeName="transform" type="skewX"
+            values="0; -18; 10; -16; 4; -12; 0"
+            keyTimes="0; 0.15; 0.3; 0.5; 0.7; 0.85; 1"
+            dur="0.6s" repeatCount="indefinite"/>
+          <path fill="#8b5cf6" opacity="0.35">
+            <animate attributeName="d"
+              values="
+                M9,20 Q-2,28 -4,38 T-6,54 T-2,68 L4,70 L6,58 Q4,44 6,30 Z;
+                M9,20 Q-4,28 -6,38 T-8,54 T-4,68 L2,70 L4,58 Q2,44 4,30 Z;
+                M9,20 Q-1,27 -3,37 T-5,53 T-1,67 L5,69 L7,57 Q5,43 7,29 Z;
+                M9,20 Q-3,28 -5,39 T-7,55 T-3,69 L3,71 L5,59 Q3,45 5,31 Z;
+                M9,20 Q-2,28 -4,38 T-6,54 T-2,68 L4,70 L6,58 Q4,44 6,30 Z"
+              dur="0.6s" repeatCount="indefinite"/>
+          </path>
+        </g>
+
+        <!-- Ribbon 2: inner orange glow -->
+        <g>
+          <animateTransform attributeName="transform" type="skewX"
+            values="2; -14; 12; -10; 6; -8; 2"
+            keyTimes="0; 0.15; 0.3; 0.5; 0.7; 0.85; 1"
+            dur="0.6s" repeatCount="indefinite"/>
+          <path fill="#ff6600" opacity="0.22">
+            <animate attributeName="d"
+              values="
+                M9,22 Q0,29 -2,39 T-4,55 T0,69 L5,68 L5,56 Q3,42 5,30 Z;
+                M9,22 Q-2,29 -4,39 T-6,55 T-2,69 L3,68 L3,56 Q1,42 3,30 Z;
+                M9,22 Q1,28 -1,38 T-3,54 T1,68 L6,67 L6,55 Q4,41 6,29 Z;
+                M9,22 Q-1,29 -3,40 T-5,56 T-1,70 L4,69 L4,57 Q2,43 4,31 Z;
+                M9,22 Q0,29 -2,39 T-4,55 T0,69 L5,68 L5,56 Q3,42 5,30 Z"
+              dur="0.6s" repeatCount="indefinite"/>
+          </path>
+        </g>
+
+        <!-- Ribbon 3: thin cyan accent line -->
+        <g>
+          <animateTransform attributeName="transform" type="skewX"
+            values="-2; -20; 6; -18; 2; -14; -2"
+            keyTimes="0; 0.15; 0.3; 0.5; 0.7; 0.85; 1"
+            dur="0.6s" repeatCount="indefinite"/>
+          <path fill="none" stroke="#00ffff" stroke-width="1" opacity="0.3">
+            <animate attributeName="d"
+              values="
+                M9,21 Q-1,28 -3,38 T-5,53 T-1,67 L5,69;
+                M9,21 Q-3,28 -5,39 T-7,55 T-3,69 L3,71;
+                M9,21 Q0,27 -2,37 T-4,52 T0,66 L6,68;
+                M9,21 Q-2,28 -4,39 T-6,54 T-2,68 L4,70;
+                M9,21 Q-1,28 -3,38 T-5,53 T-1,67 L5,69"
+              dur="0.6s" repeatCount="indefinite"/>
+          </path>
+        </g>
       </g>
 
       <!-- === LEFT ARM === -->
@@ -246,6 +293,91 @@
         <rect x="24" y="43" width="1" height="11" fill="#ff6600" opacity="0.35"/>
       </g>
 
+    </g>
+
+    <!-- ===== ROBOT DOG (Unitree-style quadruped) ===== -->
+    <g id="robotDog">
+      <!-- Body - low-slung rectangular chassis -->
+      <rect x="0" y="18" width="22" height="10" rx="2" fill="#22223a"/>
+      <rect x="2" y="19" width="18" height="7" rx="1" fill="#2a2a44"/>
+      <!-- Body panel lines -->
+      <line x1="6" y1="19" x2="6" y2="26" stroke="#3a3a5c" stroke-width="0.5"/>
+      <line x1="16" y1="19" x2="16" y2="26" stroke="#3a3a5c" stroke-width="0.5"/>
+      <!-- Glowing sensor strip on back -->
+      <rect x="18" y="20" width="3" height="4" rx="0.5" fill="#00ffff" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.2;0.55;0.25;0.5" dur="2s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Neck / head mount -->
+      <rect x="17" y="14" width="6" height="5" rx="1" fill="#2a2a44"/>
+
+      <!-- Head - boxy with camera/sensor -->
+      <rect x="17" y="9" width="8" height="7" rx="1.5" fill="#22223a"/>
+      <rect x="18" y="10" width="6" height="4" rx="1" fill="#1a1a30"/>
+      <!-- Camera eye (glowing) -->
+      <rect x="22" y="11" width="2" height="2" rx="0.5" fill="#ff6600" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.35;0.75;0.4;0.7" dur="1.8s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Antenna / sensor mast -->
+      <rect x="20" y="6" width="1.5" height="4" rx="0.5" fill="#333355"/>
+      <rect x="19.5" y="5" width="2.5" height="1.5" rx="0.5" fill="#ff6600" opacity="0.35"/>
+
+      <!-- Tail - short mechanical stub -->
+      <rect x="-5" y="21" width="6" height="3" rx="1" fill="#22223a"/>
+      <rect x="-7" y="22" width="3" height="1.5" rx="0.5" fill="#333355"/>
+
+      <!-- === LEGS (4 legs, alternating gait) === -->
+
+      <!-- Front Left Leg -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          values="25 4 27; -20 4 27; 25 4 27; 40 4 27; 25 4 27"
+          keyTimes="0; 0.25; 0.5; 0.75; 1"
+          dur="0.45s" repeatCount="indefinite"/>
+        <!-- Upper leg -->
+        <rect x="2" y="26" width="4" height="9" rx="1.5" fill="#22223a"/>
+        <!-- Lower leg -->
+        <rect x="1" y="33" width="4" height="8" rx="1.5" fill="#2a2a44"/>
+        <!-- Foot/paw -->
+        <rect x="0" y="39" width="6" height="3" rx="1" fill="#1a1a30"/>
+        <rect x="0.5" y="40" width="5" height="1" rx="0.5" fill="#ff6600" opacity="0.3"/>
+      </g>
+
+      <!-- Front Right Leg -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          values="-20 18 27; 25 18 27; -20 18 27; -35 18 27; -20 18 27"
+          keyTimes="0; 0.25; 0.5; 0.75; 1"
+          dur="0.45s" repeatCount="indefinite"/>
+        <rect x="16" y="26" width="4" height="9" rx="1.5" fill="#22223a"/>
+        <rect x="17" y="33" width="4" height="8" rx="1.5" fill="#2a2a44"/>
+        <rect x="16" y="39" width="6" height="3" rx="1" fill="#1a1a30"/>
+        <rect x="16.5" y="40" width="5" height="1" rx="0.5" fill="#ff6600" opacity="0.3"/>
+      </g>
+
+      <!-- Back Left Leg -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          values="-20 4 27; 25 4 27; -20 4 27; -35 4 27; -20 4 27"
+          keyTimes="0; 0.25; 0.5; 0.75; 1"
+          dur="0.45s" repeatCount="indefinite"/>
+        <rect x="2" y="26" width="4" height="9" rx="1.5" fill="#22223a"/>
+        <rect x="1" y="33" width="4" height="8" rx="1.5" fill="#2a2a44"/>
+        <rect x="0" y="39" width="6" height="3" rx="1" fill="#1a1a30"/>
+        <rect x="0.5" y="40" width="5" height="1" rx="0.5" fill="#ff6600" opacity="0.3"/>
+      </g>
+
+      <!-- Back Right Leg -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          values="25 18 27; -20 18 27; 25 18 27; 40 18 27; 25 18 27"
+          keyTimes="0; 0.25; 0.5; 0.75; 1"
+          dur="0.45s" repeatCount="indefinite"/>
+        <rect x="16" y="26" width="4" height="9" rx="1.5" fill="#22223a"/>
+        <rect x="17" y="33" width="4" height="8" rx="1.5" fill="#2a2a44"/>
+        <rect x="16" y="39" width="6" height="3" rx="1" fill="#1a1a30"/>
+        <rect x="16.5" y="40" width="5" height="1" rx="0.5" fill="#ff6600" opacity="0.3"/>
+      </g>
     </g>
 
     <!-- ===== MECHANICAL DRAGON (silhouette style) ===== -->
@@ -341,13 +473,13 @@
   <!-- Sky -->
   <rect width="400" height="200" fill="url(#sky)"/>
 
-  <!-- Sun with strong orange glow -->
-  <ellipse cx="320" cy="140" rx="145" ry="72" fill="url(#sunGlow)">
-    <animate attributeName="rx" values="145;155;142;150;145" dur="5s" repeatCount="indefinite"/>
+  <!-- Sun with orange glow (behind mountains) -->
+  <ellipse cx="278" cy="85" rx="100" ry="50" fill="url(#sunGlow)">
+    <animate attributeName="rx" values="100;106;98;103;100" dur="5s" repeatCount="indefinite"/>
   </ellipse>
 
-  <!-- Pixel sun disc -->
-  <g transform="translate(288, 112)">
+  <!-- Pixel sun disc (centered on glow, lower half hidden by mountains) -->
+  <g transform="translate(252, 63)">
     <rect x="10" y="0" width="32" height="5" fill="#ffcc66"/>
     <rect x="5" y="5" width="42" height="5" fill="#ffaa33"/>
     <rect x="0" y="10" width="52" height="5" fill="#ff8822"/>
@@ -417,6 +549,17 @@
       dur="18s" repeatCount="indefinite"/>
     <g transform="scale(0.85)">
       <use href="#dragon"/>
+    </g>
+  </g>
+
+  <!-- ===== ROBOT DOG (behind runner) ===== -->
+  <g transform="translate(108, 118)" filter="url(#glow)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-1.5; 0,0; 0,-0.5; 0,0"
+        keyTimes="0; 0.25; 0.5; 0.75; 1"
+        dur="0.45s" repeatCount="indefinite"/>
+      <use href="#robotDog"/>
     </g>
   </g>
 

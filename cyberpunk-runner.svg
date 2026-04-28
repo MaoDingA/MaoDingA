@@ -379,20 +379,6 @@
     </rect>
   </g>
 
-  <!-- HUD corners -->
-  <g stroke="#ff6600" stroke-opacity="0.2" fill="none" stroke-width="1">
-    <path d="M8,8 L8,28 M8,8 L28,8"/>
-    <path d="M392,8 L392,28 M392,8 L372,8"/>
-    <path d="M8,192 L8,172 M8,192 L28,192"/>
-    <path d="M392,192 L392,172 M392,192 L372,192"/>
-  </g>
-
-  <!-- Watermark -->
-  <text x="335" y="196" font-family="monospace" font-size="7" fill="#ff6600" opacity="0.3" letter-spacing="2">
-    CYBER_RUN // v2.0
-    <animate attributeName="opacity" values="0.3;0.1;0.35;0.15;0.3" dur="5s" repeatCount="indefinite"/>
-  </text>
-
   <!-- Vignette -->
   <rect width="400" height="200" fill="none" stroke="#0c0614" stroke-width="24" opacity="0.35"/>
 </svg>

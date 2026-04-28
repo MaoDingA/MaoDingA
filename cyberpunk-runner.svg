@@ -247,6 +247,93 @@
       </g>
 
     </g>
+
+    <!-- ===== MECHANICAL DRAGON (silhouette style) ===== -->
+    <g id="dragon">
+      <!-- Body silhouette - single dark shape matching sky's deep purple -->
+      <path d="
+        M128,30
+        L122,28 L118,22 L112,18 L106,16 L100,17 L94,20
+        L88,22 L82,24 L76,25 L70,26 L60,27 L50,28
+        L42,30 L36,33 L32,37 L30,41 L30,44
+        L34,47 L40,48 L46,48 L52,47 L58,45
+        L64,43 L70,42 L80,42 L90,42 L100,41
+        L110,39 L118,36 L124,33 Z
+      " fill="#1a0c30" opacity="0.88"/>
+
+      <!-- Belly highlight - subtle warm tone from below -->
+      <path d="
+        M34,42 L40,43 L52,43 L64,42 L80,42 L100,40 L116,36
+        L116,38 L100,42 L80,43 L64,44 L52,44 L40,44 L34,44 Z
+      " fill="#3d1845" opacity="0.3"/>
+
+      <!-- Wing (upper) - sharp angular shape -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          values="-2 70 26; 12 70 26; -2 70 26; 8 70 26; -2 70 26"
+          keyTimes="0; 0.25; 0.5; 0.75; 1"
+          dur="2.5s" repeatCount="indefinite"/>
+        <path d="M68,28 L48,6 L56,4 L66,16 L74,24Z" fill="#150a20" opacity="0.85"/>
+        <!-- Wing edge glow - thin orange rim light -->
+        <path d="M68,28 L48,6 L56,4 L66,16 L74,24Z" fill="none" stroke="#e87a2a" stroke-width="0.6" opacity="0.2"/>
+      </g>
+
+      <!-- Wing (lower) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          values="-2 70 32; 10 70 32; -2 70 32; 7 70 32; -2 70 32"
+          keyTimes="0; 0.25; 0.5; 0.75; 1"
+          dur="2.5s" repeatCount="indefinite"/>
+        <path d="M68,32 L42,16 L50,14 L62,26 L72,31Z" fill="#12081e" opacity="0.8"/>
+        <path d="M68,32 L42,16 L50,14 L62,26 L72,31Z" fill="none" stroke="#e87a2a" stroke-width="0.5" opacity="0.15"/>
+      </g>
+
+      <!-- Tail -->
+      <path d="M30,42 L20,43 L10,43 L2,42 L-2,40 L-4,38"
+        fill="none" stroke="#1a0c30" stroke-width="4" stroke-linecap="round" opacity="0.88"/>
+      <polygon points="-6,37 -2,38 -2,40" fill="#1a0c30" opacity="0.88"/>
+
+      <!-- Legs (minimal) -->
+      <line x1="44" y1="47" x2="42" y2="53" stroke="#1a0c30" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+      <line x1="66" y1="45" x2="68" y2="51" stroke="#1a0c30" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+
+      <!-- Horns -->
+      <polyline points="108,17 104,10 102,6" fill="none" stroke="#1a0c30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+      <polyline points="116,18 120,11 123,7" fill="none" stroke="#1a0c30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+
+      <!-- === EYE (the only bright element) === -->
+      <g>
+        <rect x="110" y="22" width="5" height="3" rx="1" fill="#0a0415"/>
+        <!-- Glowing red eye - looks at runner occasionally -->
+        <rect x="111" y="23" width="3" height="1.5" rx="0.5" fill="#ff3300">
+          <animate attributeName="fill" values="#ff3300;#ff6600;#ff3300" dur="4s" repeatCount="indefinite"/>
+          <animate attributeName="x" values="111;111;109;111;111;108;111;111"
+            keyTimes="0;0.45;0.5;0.58;0.85;0.9;0.95;1"
+            dur="8s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="23;23;24;23;23;25;23;23"
+            keyTimes="0;0.45;0.5;0.58;0.85;0.9;0.95;1"
+            dur="8s" repeatCount="indefinite"/>
+          <animate attributeName="width" values="3;3;4;3;3;4;3;3"
+            keyTimes="0;0.45;0.5;0.58;0.85;0.9;0.95;1"
+            dur="8s" repeatCount="indefinite"/>
+          <animate attributeName="height" values="1.5;1.5;2.5;1.5;1.5;2.5;1.5;1.5"
+            keyTimes="0;0.45;0.5;0.58;0.85;0.9;0.95;1"
+            dur="8s" repeatCount="indefinite"/>
+        </rect>
+        <!-- Eye glow burst when looking at runner -->
+        <rect x="109" y="21" width="7" height="6" rx="1" fill="#ff3300" opacity="0">
+          <animate attributeName="opacity" values="0;0;0.45;0;0;0.55;0;0"
+            keyTimes="0;0.45;0.5;0.58;0.85;0.9;0.95;1"
+            dur="8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Subtle body bob -->
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-1; 0,0; 0,-0.5; 0,0"
+        keyTimes="0; 0.25; 0.5; 0.75; 1"
+        dur="2.5s" repeatCount="indefinite"/>
+    </g>
   </defs>
 
   <!-- ============ SCENE ============ -->
@@ -321,6 +408,16 @@
     <line x1="0" y1="172" x2="400" y2="172"/>
     <line x1="0" y1="180" x2="400" y2="180"/>
     <line x1="0" y1="190" x2="400" y2="190"/>
+  </g>
+
+  <!-- ===== MECHANICAL DRAGON (flying in sky) ===== -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="420,-5; -180,20"
+      dur="18s" repeatCount="indefinite"/>
+    <g transform="scale(0.85)">
+      <use href="#dragon"/>
+    </g>
   </g>
 
   <!-- ===== RUNNER ===== -->

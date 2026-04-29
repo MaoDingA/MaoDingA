@@ -1,5 +1,8 @@
 name: Update README Cards
 
+permissions:
+  contents: write
+
 on:
   schedule:
     # 每天 UTC 3:00 (北京时间 11:00) 自动更新

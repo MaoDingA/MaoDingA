@@ -7,5 +7,5 @@
 ### Most Used Languages
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MaoDingA/MaoDingA/main/lang-pie.svg" alt="Languages" />
+  <img src="./profile/top-langs.svg" alt="Top Languages" />
 </p>
